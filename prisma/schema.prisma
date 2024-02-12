@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch"]
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model Match {
+  id      Int     @id @default(autoincrement())
+  type    String
+  latest  Boolean @default(true) 
+  opp     String
+  oppLogo String
+
+  lakerscore Int
+  oppScore   Int
+
+  status   String
+  stadium  String
+  location String
+  date     DateTime
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("matches")
+}
+
+model Player {
+  id        Int    @id
+  firstname String
+  lastname  String
+  nickname  String
+  image     String
+  role      String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("players")
+}

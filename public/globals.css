@@ -39,7 +39,7 @@ main section.banner {
   @apply p-0 m-0;
 }
 main section.banner .banner-container {
-  background: url("./public/banner.jpg") no-repeat;
+  background: url("../public/banner.jpg") no-repeat;
   background-size: cover;
   background-position-x: center;
 }
