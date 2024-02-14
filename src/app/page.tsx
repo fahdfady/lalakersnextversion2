@@ -5,7 +5,7 @@ import Banner from "@/components/banner";
 export default async function Home() {
   const latestGame: Match[] = await prisma.match.findMany({
     where: { latest: true },
-    orderBy: { createdAt: "desc" }
+    orderBy: { date: "desc" }
   })
 
   return (

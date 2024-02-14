@@ -13,23 +13,26 @@ export default function Footer() {
                             <span className="self-center text-2xl uppercase font-semibold whitespace-nowrap text-white">lakers</span>
                         </Link>
                     </div>
-                    <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 text-sm">
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold uppercase text-white">Resources</h2>
+                            <h2 className="mb-6 font-semibold uppercase text-white">Pages</h2>
                             <ul className="text-gray-400 font-medium">
                                 <li className="mb-4">
-                                    <Link href="https://nextjs.org/" className="hover:underline duration:100">Next.js</Link>
+                                    <Link href="/team" className="hover:underline duration:100">official website</Link>
                                 </li>
                                 <li className="mb-4">
-                                    <Link href="https://tailwindcss.com/" className="hover:underline duration:100">Tailwind CSS</Link>
+                                    <Link href="/team" className="hover:underline duration:100">our team</Link>
+                                </li>
+                                <li className="mb-4">
+                                    <Link href="/fixtures" className="hover:underline duration:100">fixtures</Link>
                                 </li>
                                 <li>
-                                    <Link href="https://flowbite.com/" className="hover:underline duration:100">Flowbite</Link>
+                                    <Link href="/about" className="hover:underline duration:100">about</Link>
                                 </li>
                             </ul>
                         </div>
                         <div>
-                            <h2 className="mb-6 text-sm font-semibold uppercase text-white">Follow us</h2>
+                            <h2 className="mb-6 font-semibold uppercase text-white">Follow us</h2>
                             <ul className="text-gray-400 font-medium">
                                 <li className="mb-4">
                                     <Link href="https://twitter.com/LakersFanFahdev" className="hover:underline duration:100">twitter</Link>

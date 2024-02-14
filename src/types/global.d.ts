@@ -21,9 +21,10 @@ declare global {
     type Player = {
         id: number;
         firstname: string;
-        lastname: string;
-        nickname: string?;
+        nickname: string;
         image: string;
         role: string;
     };
+
+    
 }

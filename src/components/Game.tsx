@@ -32,7 +32,7 @@ const Game: React.FC<Props> = async ({ game }) => {
                     />
                     <h3 className="uppercase text-lg">los angeles lakers</h3>
                 </div>
-                <div className="w-[300px] flex flex-col justify-center items-center gap-1 md:gap-5 md:order-5 py-6 sm:py-0">
+                <div className="w-[300px] flex flex-col justify-center items-center gap-1 md:gap-4 md:order-5 py-6 sm:py-0">
                     <h3 className="text-stone-400">
                         {game?.status}
                     </h3>

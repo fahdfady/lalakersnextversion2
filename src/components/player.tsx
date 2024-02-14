@@ -1,6 +1,10 @@
 import Image from "next/image";
 
-export default async function Player(data: player) {
+type PlayerProps = {
+  data: Player;
+}
+
+const player: React.FC<PlayerProps> = async ({ data }) => {
 
   return (
     <div
@@ -9,7 +13,7 @@ export default async function Player(data: player) {
       className="player flex justify-center items-end relative lg:w-[20.5rem] lg:h-[25rem] md:w-[10.5rem] md:h-[16rem] sm:w-[19rem] sm:h-[21rem] w-[8.5rem] h-[13rem] max-w-sm  border rounded-lg shadow bg-[#0c0600] border-gray-700">
       <Image
         className="mx-auto object-cover duration-200 ease-in-out"
-        src={`/players/${data?.image}`}
+        src={`/players${data?.image}`}
         width={342}
         height={250}
         quality={80}
@@ -29,3 +33,5 @@ export default async function Player(data: player) {
     </div>
   )
 }
+
+export default player

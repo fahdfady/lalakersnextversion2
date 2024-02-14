@@ -36,7 +36,6 @@ model Match {
 model Player {
   id        Int    @id
   firstname String
-  lastname  String
   nickname  String
   image     String
   role      String
