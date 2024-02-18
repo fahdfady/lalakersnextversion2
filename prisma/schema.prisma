@@ -15,7 +15,7 @@ datasource db {
 model Match {
   id      Int     @id @default(autoincrement())
   type    String
-  latest  Boolean @default(true) 
+  latest  Boolean @default(true)
   opp     String
   oppLogo String
 
@@ -44,4 +44,29 @@ model Player {
   updatedAt DateTime @updatedAt
 
   @@map("players")
+}
+
+model Season {
+  id       Int    @id
+  year     String
+  title    String
+  text     String
+  image    String
+  imageAlt String
+
+  @@map("seasons")
+}
+
+model User {
+  id String @id @default(cuid())
+  email String 
+  isAnonymous Boolean @default(false)
+  name String
+  image String
+  verified Boolean
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users")
 }

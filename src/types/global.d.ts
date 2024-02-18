@@ -26,5 +26,12 @@ declare global {
         role: string;
     };
 
-    
+    type Season = {
+        id: number;
+        year: string;
+        title: string;
+        text: string;
+        image: string;
+        imageAlt: string;
+    }
 }

@@ -1,25 +1,21 @@
+import { isImageFound } from "@/lib/ImageValidate";
 import Image from "next/image";
 
 type Props = {
     game: Match;
 }
-const isImageFound = async (imageName: string) => {
-    return await fetch(`http://localhost:3000${imageName}`, {
-        method: "HEAD",
-    });
-};
 
 const Game: React.FC<Props> = async ({ game }) => {
 
-    let oppLogoImg= '/logoplaceholder.png';
-    const opponentLogo =await isImageFound (game?.oppLogo);
+    let oppLogoImg = '/logoplaceholder.png';
+    const opponentLogo = await isImageFound(game?.oppLogo);
 
-    if(opponentLogo.status=== 200){
-        oppLogoImg= game?.oppLogo
+    if (opponentLogo.status === 200) {
+        oppLogoImg = game?.oppLogo
     }
 
     return (
-        <section className="game w-8/12 m-auto">
+        <section className="max-w-5xl mx-auto">
             <div className="section-title">
                 <h2>Latest game</h2>
             </div>
@@ -36,10 +32,10 @@ const Game: React.FC<Props> = async ({ game }) => {
                     <h3 className="text-stone-400">
                         {game?.status}
                     </h3>
-                    <div className="score font-bold text-6xl text-yellow-300 tracking-[.45rem]">
-                        <span>{game?.lakerscore}</span>
+                    <div className="score font-bold text-6xl text-yellow-300 tracking-[.45rem]" aria-describedby="score">
+                        <span aria-labelledby={`lakers score`}>{game?.lakerscore}</span>
                         -
-                        <span>{game?.oppScore}</span>
+                        <span aria-label={`${game?.opp.slice(-1)} score`}>{game?.oppScore}</span>
                     </div>
                     <div className="stadium flex flex-col justify-center items-center">
                         <h4 className="text-stone-50">{game?.stadium}</h4>

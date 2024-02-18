@@ -10,7 +10,17 @@ const player: React.FC<PlayerProps> = async ({ data }) => {
     <div
       key={data.id}
       tabIndex={0}
-      className="player flex justify-center items-end relative lg:w-[20.5rem] lg:h-[25rem] md:w-[10.5rem] md:h-[16rem] sm:w-[19rem] sm:h-[21rem] w-[8.5rem] h-[13rem] max-w-sm  border rounded-lg shadow bg-[#0c0600] border-gray-700">
+      className="player flex justify-center items-end relative lg:w-[20.5rem] lg:h-[25rem] md:w-[10.5rem] md:h-[16rem] sm:w-[19rem] sm:h-[21rem] w-[8.5rem] h-[13rem] max-w-sm  border rounded-lg shadow bg-[#0c0600] border-gray-700 *:hover:opacity-100 *: focus:opacity-100 ">
+
+      {/*     position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 230px;
+    color: #ffa400; */}
+      {/* <span className="absolute opacity-0 w-full h-full flex justify-center items-center text-[80px] sm:text-[140px] md:text-[180px] lg:text-[220px]">{data?.id}</span> */}
       <Image
         className="mx-auto object-cover duration-200 ease-in-out"
         src={`/players${data?.image}`}

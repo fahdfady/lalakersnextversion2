@@ -14,6 +14,14 @@ export default async function Home() {
 
       {latestGame && <Game game={latestGame[0]} />}
 
+      <section className="max-w-5xl mx-auto">
+        <div className="section-title"><h2>ACHIEVEMENTS</h2></div>
+        <div className="space-y-4">
+          <div className="flex flex-wrap">
+            <h3>Championship wins</h3>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
