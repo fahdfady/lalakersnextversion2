@@ -1,5 +1,6 @@
-import { isImageFound } from "@/lib/ImageValidate";
+import { isImageFound } from "@/lib/validations";
 import Image from "next/image";
+import SectionTitle from "./sectionTitle";
 
 type Props = {
     game: Match;
@@ -16,9 +17,7 @@ const Game: React.FC<Props> = async ({ game }) => {
 
     return (
         <section className="max-w-5xl mx-auto">
-            <div className="section-title">
-                <h2>Latest game</h2>
-            </div>
+            <SectionTitle title="Latest game" />
 
             <div className="flex flex-col justify-evenly items-center text-center sm:flex-row md:px-5">
                 <div className="team w-[220px] flex flex-col justify-center items-center gap-3 md:order-none">

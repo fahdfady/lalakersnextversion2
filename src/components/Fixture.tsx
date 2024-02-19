@@ -1,6 +1,6 @@
 // `use client`
 
-import { isImageFound } from "@/lib/ImageValidate";
+import { isImageFound } from "@/lib/validations";
 import Image from "next/image";
 // import { UserAuth } from "../context/AuthContext.ts";
 // import { db } from '../firebase';
@@ -39,7 +39,7 @@ export default async function Fixture(match: Match) {
                         quality={50}
                         src={'/logo.png'}
                         alt={"Lakers"}
-                        className="me-2 object-cover align-middle" />
+                        className="me-2 object-contain align-middle h-[25px]" />
                     <bdi className="text-base whitespace-nowrap">Lakers</bdi>
                 </div>
                 <div className="flex items-center">
@@ -48,7 +48,7 @@ export default async function Fixture(match: Match) {
                         quality={50}
                         src={oppLogoImg}
                         alt={`${match?.opp} Logo`}
-                        className="me-2 object-cover align-middle" />
+                        className="me-2 object-contain align-middle h-[25px]" />
                     <bdi className="text-base whitespace-nowrap">{match?.opp.split(" ").splice(-1)}</bdi>
                 </div>
             </div>
