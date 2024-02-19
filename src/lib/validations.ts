@@ -24,10 +24,14 @@ export const isLight = (color: string): boolean => {
     // It removes the '#' from the color code 
     // It parses the red, green, and blue components of the color 
     // It calculates the brightness of the color
-     // If the brightness is greater than 127.5, it's considered a light color
+    // If the brightness is greater than 127.5, it's considered a light color
 }
 
 // Function to get the text color based on the background color
-export const getTextColor = (backgroundColor: string): string => {
-    return isLight(backgroundColor) ? "#000" : "#fff";
+export const getTextColor = (backgroundColor: string, muted?: boolean): string => {
+    // muted ? return isLight(backgroundColor) ? "#000" : "#fff"
+    // : return isLight(backgroundColor) ? "#000" : "#fff";
+    return muted
+        ? (isLight(backgroundColor) ? "#222" : "#d8d8d8")
+        : (isLight(backgroundColor) ? "#000" : "#fff")
 }
