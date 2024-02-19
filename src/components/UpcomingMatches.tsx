@@ -8,7 +8,7 @@ export default async function UpcomingMatches() {
 
     const fixtures: Match[] = await prisma.match.findMany({
         where: { status: "fixture" },
-        orderBy: { date: "desc" },
+        orderBy: { date: "asc" },
         take: 3,
     })
 
