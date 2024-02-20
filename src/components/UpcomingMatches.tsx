@@ -23,7 +23,7 @@ export default async function UpcomingMatches() {
                         // assign the team theme as a background
                         <div key={match?.id}
                             style={{ backgroundColor: teamThemeValidate(match?.opp), color: getTextColor(teamThemeValidate(match?.opp)) }}
-                            className="flex flex-col justify-center items-center p-2 border-x-2 border-black"
+                            className="flex flex-col justify-center items-center p-2 border-x-2 border-black text-center"
                         >
                             <Image
                                 width={150} height={150}
