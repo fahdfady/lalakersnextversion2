@@ -22,8 +22,8 @@ export default function RootLayout({
     <html lang="en" className='dark'>
       <body className={rubik.className} >
         <Navbar />
-        {/* < Suspense fallback={< Loading />}> */}
 
+        {/* < Suspense fallback={< Loading />}> */}
         <main className="min-h-[45vh]" >
           {children}
         </main>
