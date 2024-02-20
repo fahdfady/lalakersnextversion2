@@ -1,7 +1,7 @@
 import prisma from "@/lib/prisma";
 import { getTextColor, isImageFound, teamThemeValidate } from "@/lib/validations";
 import Image from "next/image";
-import SectionTitle from "./sectionTitle";
+import SectionTitle from "@/components/SectionTitle";
 
 
 export default async function UpcomingMatches() {

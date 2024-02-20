@@ -1,6 +1,6 @@
 import { isImageFound } from "@/lib/validations";
 import Image from "next/image";
-import SectionTitle from "./sectionTitle";
+import SectionTitle from "@/components/SectionTitle";
 
 type Props = {
     game: Match;
