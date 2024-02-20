@@ -2,7 +2,7 @@ import prisma from "@/lib/prisma";
 import Game from "@/components/Game";
 import Banner from "@/components/banner";
 import UpcomingMatches from "@/components/UpcomingMatches";
-import SectionTitle from "@/components/sectionTitle";
+import SectionTitle from "@/components/SectionTitle";
 
 export default async function Home() {
   const latestGame: Match[] = await prisma.match.findMany({
