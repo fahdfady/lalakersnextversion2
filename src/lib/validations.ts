@@ -1,11 +1,11 @@
-export const isImageFound = async (imageName: string) => {
+export const isImageFound = async (imageName: string): Promise<Response> => {
     try {
         // Try fetching from the server first
         const response = await fetch(`https://lalakersnext.vercel.app/${imageName}`, {
             method: "HEAD",
         });
         if (response.ok) {
-            return true;
+            return response;
         } else {
             throw new Error('Not found on server');
         }
@@ -15,7 +15,7 @@ export const isImageFound = async (imageName: string) => {
         const responseLocal = await fetch(`http://localhost:3000${imageName}`, {
             method: "HEAD",
         });
-        return responseLocal.ok;
+        return responseLocal;
     }
 };
 
