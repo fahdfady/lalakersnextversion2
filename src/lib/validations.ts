@@ -5,7 +5,7 @@ export const isImageFound = async (imageName: string): Promise<string> => {
             method: "HEAD",
         });
         if (response.ok) {
-            return `https://lalakersnext.vercel.app/${imageName}`;
+            return `${imageName}`;
         } else {
             throw new Error('Not found on server');
         }
