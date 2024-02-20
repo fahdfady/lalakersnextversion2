@@ -19,12 +19,7 @@ export default async function Fixture(match: Match) {
     //     );
     //     const matchDate = fireBaseTime.toDateString();
     //     const matchTime = fireBaseTime.toLocaleTimeString();
-    let oppLogoImg = '/logoplaceholder.png';
-    const opponentLogo = await isImageFound(match?.oppLogo);
-
-    if (opponentLogo.status === 200) {
-        oppLogoImg = match?.oppLogo
-    }
+    const oppLogoImg = await isImageFound(match?.oppLogo)
 
     return (
         <div aria-label="Fixture" className="flex items-center gap-2 w-full h-[62px]" tabIndex={0}>

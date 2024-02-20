@@ -8,12 +8,7 @@ type Props = {
 
 const Game: React.FC<Props> = async ({ game }) => {
 
-    let oppLogoImg = '/logoplaceholder.png';
-    const opponentLogo = await isImageFound(game?.oppLogo);
-
-    if (opponentLogo.status === 200) {
-        oppLogoImg = game?.oppLogo
-    }
+    const oppLogoImg = await isImageFound(game?.oppLogo);
 
     return (
         <section className="max-w-5xl mx-auto">

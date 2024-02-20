@@ -1,13 +1,19 @@
-export const isImageFound = async (imageName: string): Promise<Response> => {
+export const isImageFound = async (imageName: string): Promise<string> => {
+    try {
         // Try fetching from the server first
         const response = await fetch(`https://lalakersnext.vercel.app/${imageName}`, {
             method: "HEAD",
         });
         if (response.ok) {
-            return response;
+            return `https://lalakersnext.vercel.app/${imageName}`;
         } else {
             throw new Error('Not found on server');
         }
+    } catch (error) {
+        console.log(error);
+        // If fetching from the server fails, return the default image
+        return '/logoplaceholder.png';
+    }
 };
 
 // to validate the theme of team depending on the team name
