@@ -1,7 +1,22 @@
 export const isImageFound = async (imageName: string) => {
-    return await fetch(`http://localhost:3000${imageName}`, {
-        method: "HEAD",
-    });
+    try {
+        // Try fetching from the server first
+        const response = await fetch(`https://lalakersnext.vercel.app/${imageName}`, {
+            method: "HEAD",
+        });
+        if (response.ok) {
+            return true;
+        } else {
+            throw new Error('Not found on server');
+        }
+    } catch (error) {
+        console.log(error);
+        // If fetching from the server fails, try fetching from localhost
+        const responseLocal = await fetch(`http://localhost:3000${imageName}`, {
+            method: "HEAD",
+        });
+        return responseLocal.ok;
+    }
 };
 
 // to validate the theme of team depending on the team name
