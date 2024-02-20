@@ -6,6 +6,7 @@ import { Suspense } from 'react'
 // import Loading from './loading'
 import Footer from '@/components/footer'
 import { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react';
 
 const rubik = Rubik({ subsets: ['latin'] })
 
@@ -31,6 +32,7 @@ export default function RootLayout({
         < Footer />
         {/* </Suspense> */}
 
+        <Analytics />
         {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js" /> */}
       </body>
     </html>

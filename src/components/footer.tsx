@@ -15,7 +15,7 @@ export default function Footer() {
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 text-sm">
                         <div>
-                            <h2 className="mb-6 font-semibold uppercase text-white">Pages</h2>
+                            <h2 className="mb-6 font-semibold uppercase text-white">Links</h2>
                             <ul className="text-gray-400 font-medium">
                                 <li className="mb-4">
                                     <Link href="/team" className="hover:underline duration:100">official website</Link>
